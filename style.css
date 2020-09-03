@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* intro */
+.weather-intro {
+  height: 20vh;
+}
+
+/* Searchbar */
+
+.search-wrapper {
+  height: 60vh;
+  align-items: center;
+}
+
+.seachbar {
+  height: 10vh;
+  width: 100%;
+  background: #fff;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.search-input-wrapper {
+  height: fit-content;
+  flex: 1 90%;
+}
+
+#location-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 2.5em;
+  background: transparent;
+  font-family: "Overpass", sans-serif;
+}
+
+.search-icon {
+  font-size: 2.3em;
+  flex: 1 10%;
+  cursor: pointer;
+}
+
+/*
+##Device = Tablets, Ipads (portrait)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*
+##Device = Tablets, Ipads (landscape)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+*/
+
+@media (max-width: 480px) {
+}

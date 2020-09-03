@@ -1,0 +1,44 @@
+:root {
+  --light: #8ec5fc;
+  --dark: rgba(255, 255, 255, 0.15);
+  --light-linear: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  --dark-linear: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+}
+
+/* Backgrounds */
+.dark-bg {
+  background: var(--dark);
+  background-image: var(--dark-linear);
+  background-blend-mode: multiply, multiply;
+}
+
+.light-bg {
+  background: var(--light);
+  background-image: var(--light-linear);
+}
+
+/* Fonts sizes */
+.heading {
+  font-size: 4em;
+  font-weight: bold;
+  font-family: "Permanent Marker", cursive;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  flex-direction: column;
+}

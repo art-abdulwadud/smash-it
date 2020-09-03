@@ -30,10 +30,17 @@
 /* Fonts sizes */
 .heading {
   font-size: 4em;
-  font-weight: bold;
   font-family: "Permanent Marker", cursive;
 }
 
+.medium-text {
+  font-family: "Permanent Marker", cursive;
+  font-family: "Overpass", sans-serif;
+  font-size: 2em;
+  font-variant: small-caps;
+}
+
+/* Extras */
 .center {
   display: flex;
   justify-content: center;
@@ -41,4 +48,10 @@
 
 .column {
   flex-direction: column;
+}
+
+/* Bootstrap */
+.card-header {
+  background-color: black !important;
+  color: #fff;
 }

@@ -1,17 +1,24 @@
 const locationInput = document.querySelector('#location-input');
-const searchIcon = document.querySelector('.search-icon ');
 
-searchIcon.addEventListener('click', async function fetchWeather() {
+const convertTemp = (temp) => {
+    return Math.floor(temp - 273.15);
+};
+
+const fetchWeather = async() => {
     try {
-        console.log(locationInput.value);
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locationInput.value}&appid=9c13504c0639e9b85fa4582326935900`);
         const data = await response.json();
-        console.log(data);
-        const secondResponse = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&
-        exclude=hourly,daily&appid=9c13504c0639e9b85fa4582326935900`);
-        const data2 = await secondResponse.json();
-        console.log(data2);
+        const temp = convertTemp(data.main.temp);
+        return {
+            coords: data.coord,
+            date: data.dt,
+            humidity: data.main.humidity,
+            temp: temp + '%',
+            name: data.name,
+            weather: data.weather,
+            clouds: data.clouds.all
+        };
     } catch (error) {
         return error;
     }
-});
+};

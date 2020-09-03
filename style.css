@@ -7,6 +7,14 @@ main {
   min-height: 100vh;
 }
 
+button {
+  transition: 0.3s !important;
+}
+
+button:hover {
+  transform: scale(1.2, 1.2);
+}
+
 /* intro */
 .weather-intro {
   height: 20vh;
@@ -45,6 +53,34 @@ main {
   font-size: 2.3em;
   flex: 1 10%;
   cursor: pointer;
+}
+
+/* Location card */
+.brief-info-wrapper {
+  display: none;
+}
+
+.temp {
+  font-family: "Overpass", sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.weather-icon {
+  height: 5em;
+}
+
+.brief-info {
+  font-family: "Overpass", sans-serif;
+  list-style: none;
+}
+
+.brief-info li {
+  padding: 5px;
+}
+
+.weather-icon-small {
+  height: 1em;
 }
 
 /*

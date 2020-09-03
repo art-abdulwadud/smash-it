@@ -16,6 +16,11 @@
       href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"
+    />
   </head>
   <body>
     <main class="light-bg">
@@ -36,23 +41,56 @@
               name="location-input"
               id="location-input"
               placeholder="Search Location"
+              autofocus
             />
           </div>
           <div class="search-icon mb-2 mt-2">&#128269;</div>
         </div>
       </section>
-      <section class="p-2">
+      <section class="p-2 brief-info-wrapper">
         <div class="card text-center">
-          <div class="card-header medium-text dark-bg">New York</div>
+          <div class="card-header medium-text dark-bg"></div>
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">
-              With supporting text below as a natural lead-in to additional
-              content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="small-text weather-main small-text"></p>
+            <div class="center">
+              <h5 class="card-title temp pr-3"></h5>
+              <div class="weather-icon-wrapper">
+                <img
+                  src="http://openweathermap.org/img/w/04n.png"
+                  alt="weather"
+                  class="weather-icon brief-info-icon"
+                />
+              </div>
+            </div>
+            <ul class="center brief-info">
+              <li>
+                <img
+                  src="img/weather/humidity.png"
+                  alt="humidity"
+                  class="weather-icon-small"
+                />
+                <span class="humidity"></span>%
+              </li>
+              <li>
+                <img
+                  src="img/weather/cloud.png"
+                  alt="clouds"
+                  class="weather-icon-small"
+                />
+                <span class="clouds"></span>
+              </li>
+              <li>
+                <img
+                  src="img/weather/description.png"
+                  alt="description"
+                  class="weather-icon-small"
+                />
+                <span class="description"></span>
+              </li>
+            </ul>
+            <button class="btn btn-secondary small-text">More info</button>
           </div>
-          <div class="card-footer text-muted">2 days ago</div>
+          <div class="card-footer text-muted current-time"></div>
         </div>
       </section>
     </main>
@@ -66,5 +104,6 @@
     <script src="popper/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/fetch.js"></script>
+    <script src="js/addDataToDOM.js"></script>
   </body>
 </html>

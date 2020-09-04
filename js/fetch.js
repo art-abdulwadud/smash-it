@@ -9,6 +9,7 @@ const fetchWeather = async() => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locationInput.value}&appid=9c13504c0639e9b85fa4582326935900`);
         const data = await response.json();
         const temp = convertTemp(data.main.temp);
+        locationInput.blur();
         return {
             coords: data.coord,
             date: data.dt,

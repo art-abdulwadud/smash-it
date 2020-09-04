@@ -12,9 +12,10 @@ const getDatetime = (datetime) => {
   const date = new Date(datetime * 1000);
   const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   const day = date.getDay();
-  const hours = date.getHours();
+  let hours = date.getHours();
   const minutes = date.getMinutes();
   const currentTime = document.querySelector(".current-time");
+  if (hours < 10) {hours = "0" + hours};
   currentTime.innerHTML = days[day - 1] + " at " + hours + ":" + minutes;
 };
 
@@ -29,13 +30,14 @@ const addToBreifInfo = async () => {
       des = key[1].description;
     });
     breifInfoWrapper.style.display = 'block';
+    animateCSS('.brief-info-wrapper', 'zoomIn');
     cardHeader.innerHTML = data.name;
-    weather.innerHTML = main;
+    weather.innerHTML = des;
     tempDOM.innerHTML = data.temp;
-    breifInfoIcon.src = `http://openweathermap.org/img/w/${icon}.png`;
+    breifInfoIcon.src = `https://openweathermap.org/img/w/${icon}.png`;
     humidity.innerHTML = data.humidity;
     clouds.innerHTML = data.clouds;
-    description.innerHTML = des;
+    description.innerHTML = main;
     getDatetime(data.date);
   } catch (error) {
     return error;

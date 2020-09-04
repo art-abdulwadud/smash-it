@@ -21,10 +21,18 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
   </head>
   <body>
     <main class="light-bg">
-      <section class="search-wrapper center col column">
+      <section
+        class="search-wrapper center col column"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
         <div class="text-center center column">
           <img
             src="img/weather-1.svg"
@@ -40,7 +48,7 @@
               type="text"
               name="location-input"
               id="location-input"
-              placeholder="Search Location"
+              placeholder="Location"
               autofocus
             />
           </div>
@@ -56,7 +64,7 @@
               <h5 class="card-title temp pr-3"></h5>
               <div class="weather-icon-wrapper">
                 <img
-                  src="http://openweathermap.org/img/w/04n.png"
+                  src="img/weather/cloud.png"
                   alt="weather"
                   class="weather-icon brief-info-icon"
                 />
@@ -104,6 +112,7 @@
     <script src="popper/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/fetch.js"></script>
+    <script src="js/animate.js"></script>
     <script src="js/addDataToDOM.js"></script>
   </body>
 </html>

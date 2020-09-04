@@ -36,7 +36,7 @@ button:hover {
 }
 
 .search-input-wrapper {
-  height: fit-content;
+  height: auto;
   flex: 1 90%;
 }
 
@@ -58,6 +58,11 @@ button:hover {
 /* Location card */
 .brief-info-wrapper {
   display: none;
+  animation-duration: 3s;
+}
+
+.weather-main {
+  text-transform: capitalize;
 }
 
 .temp {

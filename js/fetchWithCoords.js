@@ -8,7 +8,7 @@ const fetchWeatherWithCoords = async() => {
             console.log(description, icon, main);
         })
         const secondResponse = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&
-        exclude=hourly,daily&appid=9c13504c0639e9b85fa4582326935900`);
+        exclude=hourly,daily&appid=${appId}`);
         const data2 = await secondResponse.json();
     } catch (error) {
         return error;

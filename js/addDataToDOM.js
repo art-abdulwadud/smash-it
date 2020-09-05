@@ -7,6 +7,7 @@ const breifInfoIcon = document.querySelector(".brief-info-icon");
 const humidity = document.querySelector(".humidity");
 const clouds = document.querySelector(".clouds");
 const description = document.querySelector(".description");
+const currentTime = document.querySelector(".current-time");
 
 const getDatetime = (datetime) => {
   const date = new Date(datetime * 1000);
@@ -14,7 +15,6 @@ const getDatetime = (datetime) => {
   const day = date.getDay();
   let hours = date.getHours();
   const minutes = date.getMinutes();
-  const currentTime = document.querySelector(".current-time");
   if (hours < 10) {hours = "0" + hours};
   currentTime.innerHTML = days[day - 1] + " at " + hours + ":" + minutes;
 };
@@ -30,7 +30,13 @@ const addToBreifInfo = async () => {
       des = key[1].description;
     });
     breifInfoWrapper.style.display = 'block';
-    animateCSS('.brief-info-wrapper', 'zoomIn');
+    animateCSS('.brief-info-wrapper', 'zoomIn', () => {
+      window.scrollTo({
+        top: breifInfoWrapper.offsetHeight,
+        left: 0,
+        behavior: 'smooth'
+      });
+    });
     cardHeader.innerHTML = data.name;
     weather.innerHTML = des;
     tempDOM.innerHTML = data.temp;
@@ -39,6 +45,7 @@ const addToBreifInfo = async () => {
     clouds.innerHTML = data.clouds;
     description.innerHTML = main;
     getDatetime(data.date);
+    
   } catch (error) {
     return error;
   }

@@ -57,46 +57,58 @@
       </section>
       <section class="p-2 brief-info-wrapper">
         <div class="card text-center">
-          <div class="card-header medium-text dark-bg"></div>
-          <div class="card-body">
-            <p class="small-text weather-main small-text"></p>
-            <div class="center">
-              <h5 class="card-title temp pr-3"></h5>
-              <div class="weather-icon-wrapper">
-                <img
-                  src="img/weather/cloud.png"
-                  alt="weather"
-                  class="weather-icon brief-info-icon"
-                />
-              </div>
-            </div>
-            <ul class="center brief-info">
-              <li>
-                <img
-                  src="img/weather/humidity.png"
-                  alt="humidity"
-                  class="weather-icon-small"
-                />
-                <span class="humidity"></span>%
+          <div class="card-header medium-text dark-bg card-header-text"></div>
+          <div class="card-header bg-light small-text">
+            <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                <a class="nav-link active currently" href="#">Latest</a>
               </li>
-              <li>
-                <img
-                  src="img/weather/cloud.png"
-                  alt="clouds"
-                  class="weather-icon-small"
-                />
-                <span class="clouds"></span>
-              </li>
-              <li>
-                <img
-                  src="img/weather/description.png"
-                  alt="description"
-                  class="weather-icon-small"
-                />
-                <span class="description"></span>
+              <li class="nav-item">
+                <a class="nav-link weekly" href="#">Weekly</a>
               </li>
             </ul>
-            <button class="btn btn-secondary small-text">More info</button>
+          </div>
+          <div class="card-body main-card-body">
+            <div class="weekly-body"></div>
+            <div class="currentCardBody">
+              <p class="small-text weather-main"></p>
+              <div class="center">
+                <h5 class="card-title temp pr-3"></h5>
+                <div class="weather-icon-wrapper">
+                  <img
+                    src="img/weather/cloud.png"
+                    alt="weather"
+                    class="weather-icon brief-info-icon"
+                  />
+                </div>
+              </div>
+              <ul class="center brief-info">
+                <li>
+                  <img
+                    src="img/weather/humidity.png"
+                    alt="humidity"
+                    class="weather-icon-small"
+                  />
+                  <span class="humidity"></span>%
+                </li>
+                <li>
+                  <img
+                    src="img/weather/cloud.png"
+                    alt="clouds"
+                    class="weather-icon-small"
+                  />
+                  <span class="clouds"></span>
+                </li>
+                <li>
+                  <img
+                    src="img/weather/description.png"
+                    alt="description"
+                    class="weather-icon-small"
+                  />
+                  <span class="description"></span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="card-footer text-muted current-time"></div>
         </div>
@@ -113,6 +125,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/appId.js"></script>
     <script src="js/fetch.js"></script>
+    <script src="js/fetchWithCoords.js"></script>
     <script src="js/animate.js"></script>
     <script src="js/addDataToDOM.js"></script>
   </body>

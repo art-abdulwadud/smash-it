@@ -1,4 +1,5 @@
 const locationInput = document.querySelector('#location-input');
+const errorDiv = document.querySelector('.error');
 
 const convertTemp = (temp) => {
     return Math.floor(temp - 273.15);
@@ -20,6 +21,6 @@ const fetchWeather = async() => {
             clouds: data.clouds.all
         };
     } catch (error) {
-        return error;
+        errorDiv.innerHTML = "Location not in Database";
     }
 };

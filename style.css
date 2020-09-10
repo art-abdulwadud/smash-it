@@ -88,6 +88,12 @@ button:hover {
   height: 1em;
 }
 
+.error {
+  font-family: "Overpass", sans-serif;
+  color: red;
+  font-size: 2em;
+}
+
 /*
 ##Device = Tablets, Ipads (portrait)
 */

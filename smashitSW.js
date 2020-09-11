@@ -1,16 +1,27 @@
 // Add to cache
 self.addEventListener("install", async (event) => {
   try {
-    const smashcache = await caches.open("cache4");
+    const smashcache = await caches.open("cache1");
     await smashcache.addAll([
       "./", // <- This is for 'index.html'
       "./style.css",
       "./css/common.css",
       "./img/weather-1.svg",
       "./css/bootstrap.min.css",
-      "./css/animate.min.css",
-      "./js/animate.js",
-      "./js/fetch.js"
+      "./js/fetch.js",
+      './js/addDataToDOM.js',
+      './css/animate.min.css',
+      './css/aos.css',
+      './js/aos.js',
+      '/jquery/jquery-3.3.1.slim.min.js',
+      './js/bootstrap.min.js',
+      './popper/popper.min.js',
+      './js/fetchWithCoords.js',
+      './js/animate.js',
+      './img/weather/cloud.png',
+      './img/weather/humidity.png',
+      './img/weather/description.png',
+      './manifest.webmanifest'
     ]);
     return self.skipWaiting();
   } catch (error) {
@@ -24,8 +35,8 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
         caches.match(req)
             .then(res => {
-                // If not able to fetch, then get from cache
-                return fetch(req) || res
+                // If not in cache fetch or else get from cache
+                return res || fetch(req)
             })
     )
 });
@@ -34,6 +45,6 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener("activate", async (event) => {
     const cacheKeys = await caches.keys();
     cacheKeys.forEach(key => {
-        if(key === 'cache3') caches.delete(key);
+        if(key === 'cache5') caches.delete(key);
     })
 })

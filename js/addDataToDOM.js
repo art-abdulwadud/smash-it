@@ -39,7 +39,7 @@ const getDatetime = (datetime) => {
     hours = "0" + hours;
   }
   if (minutes < 10) {
-    minutes = "" + minutes;
+    minutes = "0" + minutes;
   }
   currentTime.innerHTML = days[date.getDay()] + " at " + hours + ":" + minutes;
 };
@@ -75,7 +75,6 @@ window.onload = () => {
     event.preventDefault();
     toggleBtns()
   });
-  addToBreifInfo();
 };
 
 
@@ -154,7 +153,6 @@ const addToBreifInfo = async () => {
     getDatetime(data.date);
     const weeklyData = await fetchWeatherWithCoords(data.coords);
     addWeeklyDataToDom(weeklyData.daily);
-    console.log("weeklyupdate", weeklyUpdate);
   } catch (error) {
     return error.message;
   }

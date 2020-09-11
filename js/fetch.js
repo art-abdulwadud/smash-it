@@ -11,6 +11,7 @@ const fetchWeather = async() => {
         const data = await response.json();
         const temp = convertTemp(data.main.temp);
         locationInput.blur();
+        errorDiv.style.display = 'none';
         return {
             coords: data.coord,
             date: data.dt,
@@ -21,6 +22,7 @@ const fetchWeather = async() => {
             clouds: data.clouds.all
         };
     } catch (error) {
+        errorDiv.style.display = 'block';
         errorDiv.innerHTML = "Location not in Database";
     }
 };

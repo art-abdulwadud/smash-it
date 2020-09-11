@@ -1,0 +1,42 @@
+{
+  "name": "Art Smash It",
+  "short_name": "Smash It",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#8ec5fc",
+  "description": "An simple ​weather app ​where you can get weather information in real-time",
+  "icons": [
+    {
+      "src": "img/favicon_io/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicon_io/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "Screenshots/Screenshot-pc1.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    },
+    {
+      "src": "Screenshots/Screenshot-pc2.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    },
+    {
+      "src": "Screenshots/Screenshot-pc3.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    },
+    {
+      "src": "Screenshots/Screenshot-mobile1.png",
+      "sizes": "320x570",
+      "type": "image/png"
+    }
+  ]
+}

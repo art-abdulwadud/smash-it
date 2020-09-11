@@ -23,10 +23,7 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-    />
+    <link rel="stylesheet" href="css/animate.min.css" />
     <title>Smash it</title>
     <link href="css/aos.css" rel="stylesheet" />
     <link rel="manifest" href="manifest.webmanifest" />
@@ -61,6 +58,9 @@
         </div>
         <div class="error"></div>
       </section>
+      <div class="center">
+        <div class="loading"></div>
+      </div>
       <section class="p-2 brief-info-wrapper">
         <div class="card text-center">
           <div class="card-header medium-text dark-bg card-header-text"></div>
@@ -129,6 +129,23 @@
     <script src="jquery/jquery-3.3.1.slim.min.js"></script>
     <script src="popper/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      const registerSW = async () => {
+        if ("serviceWorker" in navigator) {
+          try {
+            await navigator.serviceWorker.register("/smashitSW.js", {
+              scope: "./",
+            });
+            console.log("Service Worker Registered");
+          } catch (error) {
+            console.log("Service Worker Not Registered", error);
+          }
+        }
+      };
+      window.addEventListener("load", () => {
+        registerSW();
+      });
+    </script>
     <script src="js/appId.js"></script>
     <script src="js/fetch.js"></script>
     <script src="js/fetchWithCoords.js"></script>

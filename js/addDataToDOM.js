@@ -66,6 +66,20 @@ const toggleBtns = () => {
   }
 };
 
+window.onload = () => {
+  currently.addEventListener("click", (event) => {
+    event.preventDefault()
+    toggleBtns();
+  });
+  weekly.addEventListener("click", (event) => {
+    event.preventDefault();
+    toggleBtns()
+  });
+  addToBreifInfo();
+};
+
+
+
 const addWeeklyDataToDom = async (weeklyData) => {
   try {
       // First remove elements to avoid duplicates
@@ -116,12 +130,12 @@ const addWeeklyDataToDom = async (weeklyData) => {
 
 const addToBreifInfo = async () => {
   try {
+    active = 1;
     const response = await fetchWeather();
     const data = await response;
     const main = data.weather[0].main;
     const icon = data.weather[0].icon;
     const des = data.weather[0].description;
-    weeklyUpdate = 1;
     breifInfoWrapper.style.display = "block";
     animateCSS(".brief-info-wrapper", "zoomIn", () => {
       window.scrollTo({
@@ -154,14 +168,3 @@ locationInput.addEventListener("keyup", async () => {
     addToBreifInfo();
   }
 });
-
-window.onload = () => {
-  currently.addEventListener("click", (event) => {
-    event.preventDefault()
-    toggleBtns();
-  });
-  weekly.addEventListener("click", (event) => {
-    event.preventDefault();
-    toggleBtns()
-  });
-};

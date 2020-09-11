@@ -3,8 +3,8 @@
   "short_name": "Smash It",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#8ec5fc",
-  "description": "An simple ​weather app ​where you can get weather information in real-time",
+  "background_color": "#e0c3fc",
+  "description": "A simple ​weather app ​where you can get weather information in real-time",
   "icons": [
     {
       "src": "img/favicon_io/android-chrome-192x192.png",

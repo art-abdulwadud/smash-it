@@ -15,6 +15,10 @@ button:hover {
   transform: scale(1.2, 1.2);
 }
 
+a {
+  text-decoration: none !important;
+}
+
 /* intro */
 .weather-intro {
   height: 20vh;
@@ -122,6 +126,16 @@ button:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  font-family: "Overpass", sans-serif;
+  background: black;
+  color: #e0c3fc;
 }
 
 /*

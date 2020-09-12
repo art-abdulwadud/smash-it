@@ -1,7 +1,7 @@
 // Add to cache
 self.addEventListener("install", async (event) => {
   try {
-    const smashcache = await caches.open("cache1");
+    const smashcache = await caches.open("cache2");
     await smashcache.addAll([
       "./", // <- This is for 'index.html'
       "./style.css",
@@ -35,7 +35,7 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
         caches.match(req)
             .then(res => {
-                // If not in cache fetch or else get from cache
+                // If not in cache, fetch or else get from cache
                 return res || fetch(req)
             })
     )
@@ -45,6 +45,6 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener("activate", async (event) => {
     const cacheKeys = await caches.keys();
     cacheKeys.forEach(key => {
-        if(key === 'cache5') caches.delete(key);
+        if(key === 'cache1') caches.delete(key);
     })
 })

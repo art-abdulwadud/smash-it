@@ -1,5 +1,5 @@
 # Smash it
-A weather app where users can get weather information in real-time.
+A weather app where users can get weather information in real-time. [Find the live link here](https://weather-smash-it.web.app/)
 
 ## Screenshots
 <img width="1280" alt="Screenshot-pc1" src="https://user-images.githubusercontent.com/60689731/93559297-1320b300-f988-11ea-97ed-8d2c976f45ce.png">
@@ -8,6 +8,7 @@ A weather app where users can get weather information in real-time.
 
 ## Usage
 
+- [Click here to go to the website](https://weather-smash-it.web.app/) 
 - Search location
 - Toggle between latest(which shows current weather) and weekly(which shows weather for the whole week)
 

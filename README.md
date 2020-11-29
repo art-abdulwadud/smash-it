@@ -18,7 +18,7 @@ A weather app where users can get weather information in real-time. [Find the li
 
 ## Author
 
-[Abdulwadud Mahamad a.k.a art-abdulwadud](https://github.com/art-abdulwadud)
+Abdulwadud Mahamad a.k.a [art-abdulwadud](https://github.com/art-abdulwadud)
 
 ## LICENSE
 

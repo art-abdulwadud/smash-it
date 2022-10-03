@@ -14,7 +14,8 @@ A weather app where users can get weather information in real-time. [Find the li
 
 ## Install
 
-- Clone repo and get started. No other dependcies required.
+- Clone repo and get started. 
+- Only dependcy required dotenv
 
 ## Author
 
